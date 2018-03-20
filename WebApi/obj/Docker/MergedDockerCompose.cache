@@ -1,0 +1,15 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  webapi:
+    build:
+      context: C:\Users\willy\source\repos\WebApi
+      dockerfile: WebApi\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapi
+    ports:
+    - 80/tcp
+version: '3.0'
